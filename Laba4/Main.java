@@ -15,7 +15,7 @@ public class Main {
         System.out.println(
             Tasks.task1(date, LocalDate.of(2019, 10, 1))
         );
-        Tasks.task2();
+        Tasks.task2(1);
     }
     
 
@@ -30,14 +30,36 @@ class Tasks {
         }
     }
     
-    static void task2() {
-        System.out.println(
+    static void task2(int size) {
+        switch(size) {
+            case 0:
+            System.out.println("Java");
+            case 1:
+            System.out.println(
             "─╔══╦══╦╗╔╦══╗" +
             "─╚╗╔╣╔╗║║║║╔╗║" +
             "──║║║╚╝║║║║╚╝║" +
             "╔╗║║║╔╗║╚╝║╔╗║" +
             "║╚╝╚╣║║╠╗╔╣║║║" +
             "╚═══╩╝╚╝╚╝╚╝╚╝"
-        );
+            );
+            case 2:
+            System.out.println(
+            "─╔══╦══╦╗╔╦══╗" +
+            "─╚╗╔╣╔╗║║║║╔╗║" +
+            "──║║║╚╝║║║║╚╝║" +
+            "──║║║  ║║║║  ║" +
+            "──║║║  ║║║║  ║" +
+            "──║║║  ║║║║  ║" +
+            "──║║║  ║║║║  ║" +
+            "──║║║  ║║║║  ║" +
+            "──║║║  ║║║║  ║" +
+            "──║║║  ║║║║  ║" +
+            "──║║║  ║║║║  ║" +
+            "╔╗║║║╔╗║╚╝║╔╗║" +
+            "║╚╝╚╣║║╠╗╔╣║║║" +
+            "╚═══╩╝╚╝╚╝╚╝╚╝"
+            );
+        }
     }
 }
