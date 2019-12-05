@@ -7,10 +7,14 @@ import by.bntu.fitr.alex.javalabs.lab07.input.Input;
 public class Main
 {
     public static void main(final String[] array) {
-        final int input = Input.input();
-        final int input2 = Input.input();
-        final int input3 = Input.input();
-        Printer.print(" " + Tasks.task1(input));
-        Printer.print(" " + Tasks.task2(input, input2, input3));
+        int input = Input.input();
+        int input2 = Input.input();
+        int input3 = Input.input();
+        Printer.print(String.valueOf(Tasks.task1(input)));
+        double res = Tasks.task2(input, input2, input3);
+        Printer.print(String.valueOf(Double.isNaN(res) ? "equal" : res));
+        Printer.print(String.valueOf(Tasks.task3()));
+        Printer.print(String.valueOf(Tasks.task4()));
+        Printer.print(String.valueOf(Tasks.task5(0, 'a')));
     }
 }
