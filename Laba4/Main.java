@@ -1,24 +1,18 @@
+import by.bntu.fitr.alex.javalabs.lab07.input.Input;
+import by.bntu.fitr.alex.javalabs.lab07.view.Printer;
 import java.time.LocalDate;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println(
-            "Enter ur data of birth " + 
-            "in format day month year");
-        int day = scanner.nextInt();
-        int month = scanner.nextInt();
-        int year = scanner.nextInt();
-        scanner.close();
+        System.out.println("Enter ur date of birth");
+        int day = Input.input("day: ");
+        int month = Input.input("month: ");
+        int year = Input.input("year: ");
         LocalDate date = LocalDate.of(year, month, day);
-        System.out.println(
-            Tasks.task1(date, LocalDate.of(2019, 10, 1))
-        );
-        Tasks.task2(1);
+        Printer.print(Tasks.task1(date, LocalDate.of(2019, 10, 1)));
+        Printer.print(Tasks.task2(1));
     }
-    
-
 }
 
 class Tasks {
